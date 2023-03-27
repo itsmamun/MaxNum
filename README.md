@@ -1,2 +1,2 @@
 # MaxNum
-# minNum
+
