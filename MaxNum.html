@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input_number">
+    <button id="calculate-btn">Click Here</button>
+    <p>Result Here: <span id="result"></span></p>
+
+    <script>
+        let calculateBtn = document.getElementById('calculate-btn');
+            calculateBtn.addEventListener('click',() => {
+                let inputNumbers = document.getElementById('input_number').value;
+                let numbersArry = inputNumbers.split(',').map(Number);
+                let maxNumbers = Math.max(...numbersArry);
+                let andResult = document.getElementById('result');
+                andResult.textContent= maxNumbers;
+
+            })
+
+    </script>
+</body>
+</html>
